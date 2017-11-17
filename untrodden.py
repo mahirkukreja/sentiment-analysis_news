@@ -95,8 +95,9 @@ for i in dircvs:
         continue
 # final output stored in output dataframe     
 output=pd.DataFrame()
-output['sentiment']=final_sentiments
 output['city']=citylis  
+output['sentiment']=final_sentiments
+output.to_csv('output.csv',index=False)
 end=time.time()
 print(end-start)
 
